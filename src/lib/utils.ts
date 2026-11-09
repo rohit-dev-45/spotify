@@ -76,3 +76,12 @@ export function formatDateAdded(iso: string): string {
         year: "numeric",
     });
 }
+
+export function formatNumber(n: number): string {
+    if (!Number.isFinite(n)) return "0";
+    if (n < 1_000) return n.toString();
+    if (n < 1_000_000) return `${(n / 1_0000).toFixed(n < 10_000 ? 1 : 0)}K`;
+    if (n < 1_000_000_000)
+        return `${(n / 1_000_000).toFixed(n < 10_000_000 ? 1 : 0)}M`;
+    return `${(n / 1_000_000_000).toFixed(1)}B`;
+}
