@@ -23,7 +23,7 @@ export function UserMenu() {
                     href="/register"
                     className="rounded-full text-sm font-bold text-text-subdued transition hover:scale-[1.04] hover:text-text-base"
                 >
-                    Sign Up
+                    Register
                 </Link>
                 <Link
                     href="/login"
